@@ -34,6 +34,7 @@ namespace AttendanceApp.Models
         public ICollection<ApplicationUser> Employees { get; set; }
 
         public position position  { get; set; }
+        public int positionId { get; set; }
 
         public ICollection<rest> rest { get; set; }
         public ICollection<inout> inout { get; set; }

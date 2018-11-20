@@ -14,5 +14,6 @@ namespace AttendanceApp.Models
         public int endTime { get; set; }
         public bool isCommited { get; set; }
         public ApplicationUser person  { get; set; }
+        public int personId { get; set; }
     }
 }

@@ -241,6 +241,10 @@
     <Compile Include="Migrations\201811201943563_relatedinout-appuser-added.Designer.cs">
       <DependentUpon>201811201943563_relatedinout-appuser-added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811202012012_somePKproperty-added.cs" />
+    <Compile Include="Migrations\201811202012012_somePKproperty-added.Designer.cs">
+      <DependentUpon>201811202012012_somePKproperty-added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\datatim.cs" />
@@ -479,6 +483,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811201943563_relatedinout-appuser-added.resx">
       <DependentUpon>201811201943563_relatedinout-appuser-added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811202012012_somePKproperty-added.resx">
+      <DependentUpon>201811202012012_somePKproperty-added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

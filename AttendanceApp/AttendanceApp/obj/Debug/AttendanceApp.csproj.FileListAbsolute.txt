@@ -252,3 +252,4 @@ C:\Users\user\source\repos\AttendanceApp\AttendanceApp\obj\Debug\AttendanceApp.M
 C:\Users\user\source\repos\AttendanceApp\AttendanceApp\obj\Debug\AttendanceApp.Migrations.relatedappuserpositionadded.resources
 C:\Users\user\source\repos\AttendanceApp\AttendanceApp\obj\Debug\AttendanceApp.Migrations.relatedrestappuseradded.resources
 C:\Users\user\source\repos\AttendanceApp\AttendanceApp\obj\Debug\AttendanceApp.Migrations.relatedinoutappuseradded.resources
+C:\Users\user\source\repos\AttendanceApp\AttendanceApp\obj\Debug\AttendanceApp.Migrations.somePKpropertyadded.resources
