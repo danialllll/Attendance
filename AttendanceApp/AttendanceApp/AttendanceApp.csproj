@@ -245,9 +245,14 @@
     <Compile Include="Migrations\201811202012012_somePKproperty-added.Designer.cs">
       <DependentUpon>201811202012012_somePKproperty-added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811202039346_some-FlentApi.cs" />
+    <Compile Include="Migrations\201811202039346_some-FlentApi.Designer.cs">
+      <DependentUpon>201811202039346_some-FlentApi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\datatim.cs" />
+    <Compile Include="Models\icolection.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\inout.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -486,6 +491,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811202012012_somePKproperty-added.resx">
       <DependentUpon>201811202012012_somePKproperty-added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811202039346_some-FlentApi.resx">
+      <DependentUpon>201811202039346_some-FlentApi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

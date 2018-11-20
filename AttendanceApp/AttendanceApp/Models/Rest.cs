@@ -13,7 +13,7 @@ namespace AttendanceApp.Models
         public int startTime { get; set; }
         public int endTime { get; set; }
         public bool isCommited { get; set; }
-        public ApplicationUser person  { get; set; }
+        public ICollection<ApplicationUser> persons { get; set; }
         public int personId { get; set; }
     }
 }

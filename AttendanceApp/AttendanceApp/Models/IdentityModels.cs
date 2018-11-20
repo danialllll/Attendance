@@ -66,6 +66,17 @@ namespace AttendanceApp.Models
             modelBuilder.Entity<ApplicationUser>()
                 .HasOptional(u => u.Manager)
                 .WithMany(u => u.Employees);
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(i => i.inout)
+                .WithMany(u => u.person);
+
+            modelBuilder.Entity<rest>()
+                .HasMany(u => u.persons)
+                .WithMany(r => r.rest);
+
+            modelBuilder.Entity<position>()
+                .HasMany(u => u.person);
         }
     }
 }
