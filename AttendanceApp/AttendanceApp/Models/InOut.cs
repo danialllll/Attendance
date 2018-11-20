@@ -16,5 +16,6 @@ namespace AttendanceApp.Models
         public int  workInThisDay { get; set; }
         public int delayInThisDay { get; set; }
         public bool isCommited { get; set; }
+        public ICollection<ApplicationUser> person { get; set; }
     }
 }

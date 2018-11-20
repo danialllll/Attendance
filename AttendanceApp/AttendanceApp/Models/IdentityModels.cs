@@ -33,6 +33,11 @@ namespace AttendanceApp.Models
         public int ManagerId { get; set; }
         public ICollection<ApplicationUser> Employees { get; set; }
 
+        public position position  { get; set; }
+
+        public ICollection<rest> rest { get; set; }
+        public ICollection<inout> inout { get; set; }
+
     }
 
     public class AppDbContext : IdentityDbContext<ApplicationUser>
