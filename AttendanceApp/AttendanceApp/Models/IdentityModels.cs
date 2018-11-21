@@ -22,7 +22,6 @@ namespace AttendanceApp.Models
         public string name { get; set; }
         public string lastName { get; set; }
         public string positionName { get; set; }
-        public string email { get; set; }
         public string address { get; set; }
         public string cellPhone { get; set; }
         public DateTime  birthDate  { get; set; }
@@ -78,5 +77,7 @@ namespace AttendanceApp.Models
             modelBuilder.Entity<position>()
                 .HasMany(u => u.person);
         }
+
+        public System.Data.Entity.DbSet<AttendanceApp.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }
