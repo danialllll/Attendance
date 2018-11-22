@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -13,8 +14,12 @@ namespace AttendanceApp.Models
         public int startTime { get; set; }
         public int endTime { get; set; }
         public bool isRest { get; set; }
+
+        [NotMapped]
         public int  workInThisDay { get; set; }
-        public int delayInThisDay { get; set; }
+
+        [NotMapped]
+        public int? delayInThisDay { get; set; }
         public bool isCommited { get; set; }
         public ICollection<ApplicationUser> person { get; set; }
     }

@@ -17,7 +17,7 @@ namespace AttendanceApp.Areas.Admin.Controllers
         // GET: Admin/Admin
         public ActionResult Index()
         {
-            var applicationUsers = db.ApplicationUsers.Include(a => a.position);
+            var applicationUsers = db.Users.Include(a => a.position);
             return View(applicationUsers.ToList());
         }
 
@@ -28,7 +28,7 @@ namespace AttendanceApp.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -39,7 +39,7 @@ namespace AttendanceApp.Areas.Admin.Controllers
         // GET: Admin/Admin/Create
         public ActionResult Create()
         {
-            ViewBag.positionId = new SelectList(db.positions, "Id", "positionName");
+            ViewBag.positionId = new SelectList(db.Positions, "Id", "positionName");
             return View();
         }
 
@@ -52,12 +52,12 @@ namespace AttendanceApp.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.ApplicationUsers.Add(applicationUser);
+                db.Users.Add(applicationUser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.positionId = new SelectList(db.positions, "Id", "positionName", applicationUser.positionId);
+            ViewBag.positionId = new SelectList(db.Positions, "Id", "positionName", applicationUser.positionId);
             return View(applicationUser);
         }
 
@@ -68,12 +68,12 @@ namespace AttendanceApp.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.positionId = new SelectList(db.positions, "Id", "positionName", applicationUser.positionId);
+            ViewBag.positionId = new SelectList(db.Positions, "Id", "positionName", applicationUser.positionId);
             return View(applicationUser);
         }
 
@@ -90,7 +90,7 @@ namespace AttendanceApp.Areas.Admin.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.positionId = new SelectList(db.positions, "Id", "positionName", applicationUser.positionId);
+            ViewBag.positionId = new SelectList(db.Positions, "Id", "positionName", applicationUser.positionId);
             return View(applicationUser);
         }
 
@@ -101,7 +101,7 @@ namespace AttendanceApp.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
+            ApplicationUser applicationUser = db.Users.Find(id);
             if (applicationUser == null)
             {
                 return HttpNotFound();
@@ -114,8 +114,8 @@ namespace AttendanceApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            ApplicationUser applicationUser = db.ApplicationUsers.Find(id);
-            db.ApplicationUsers.Remove(applicationUser);
+            ApplicationUser applicationUser = db.Users.Find(id);
+            db.Users.Remove(applicationUser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
