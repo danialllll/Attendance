@@ -32,27 +32,12 @@
                             <li><a href="#">محاسبه کارکرد</a></li>
 
                         </ul>
-</ul>
-                    </li>
+                </ul>
+                </li>
 
 
                 </ul>
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                          کاربر لاگین شده
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="@Url.Action("Edit", "Resumes")">پروفایل </a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="fa fa-power-off"></span>
-                        </a>
-                    </li>
-                </ul>
+                @Html.Partial("_LoginPartial")
             </div>
         </nav>
     </header>

@@ -15,6 +15,13 @@ namespace AttendanceApp.Models
         public int endTime { get; set; }
         public bool isRest { get; set; }
 
+        /*
+         * 
+         * [DatabaseGenerated(DatabaseGeneratedOption.Computed)
+         public int pmd {get (){ counting ligic}}
+             
+             */
+
         [NotMapped]
         public int  workInThisDay { get; set; }
 
